@@ -1,6 +1,17 @@
 {
   "name": "contrastrat-io",
   "version": "0.1.0",
+  "description": "Evaluate color contrast for accessibility compliance",
+  "author": {
+    "name": "Mauricio Paternina",
+    "email": "spaceinvadev@outlook.com",
+    "url": "https://spaceinva.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spaceinvadev/contrastratio.git"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

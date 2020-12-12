@@ -1,0 +1,35 @@
+@use "sass:meta"
+
+.iker-link
+  display: inline-block
+  position: relative
+  text-decoration: none
+  color: var(--color-foreground)
+  margin: 0 var(--iker-link-decorator-spacing, 0px)
+  transition: margin .25s
+  
+  &__decorator
+    width: 76px
+    height: 40px
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 4px) translateZ(0)
+    fill: none
+    stroke: var(--iker-link-decorator-stroke, var(--color-accent))
+    stroke-linecap: round
+    stroke-width: 2px
+    stroke-dasharray: var(--iker-link-decorator-offset, 69px) 278px
+    stroke-dashoffset: 361px
+    transition: stroke .25s ease var(--iker-link-decorator-stroke-delay, 0s), stroke-dasharray .35s
+  
+  &:hover
+    $iker-link-decorator-spacing: 4px
+    $iker-link-decorator-stroke: var(--color-blue)
+    $iker-link-decorator-stroke-delay: .1s
+    $iker-link-decorator-offset: 180px
+
+    --iker-link-decorator-spacing: #{meta.inspect($iker-link-decorator-spacing)}
+    --iker-link-decorator-stroke: #{meta.inspect($iker-link-decorator-stroke)}
+    --iker-link-decorator-stroke-delay: #{meta.inspect($iker-link-decorator-stroke-delay)}
+    --iker-link-decorator-offset: #{meta.inspect($iker-link-decorator-offset)}

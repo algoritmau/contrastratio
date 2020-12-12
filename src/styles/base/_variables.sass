@@ -1,6 +1,15 @@
 @use "sass:meta"
+@import url("https://use.typekit.net/iwd8ach.css")
 
+$typeface-headings: degular-display, sans-serif
 $typeface-body-copy: 'Inter', sans-serif
+$color-foreground: #080808
+$color-background: #fefefe
+$color-accent: #005bfd
 
 :root
+  --typeface-headings: #{meta.inspect($typeface-headings)}
   --typeface-body-copy: #{meta.inspect($typeface-body-copy)}
+  --color-foreground: #{meta.inspect($color-foreground)}
+  --color-background: #{meta.inspect($color-background)}
+  --color-accent: #{meta.inspect($color-accent)}
