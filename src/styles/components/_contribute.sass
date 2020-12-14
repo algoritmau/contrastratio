@@ -1,0 +1,38 @@
+@import '../abstracts/_mixins'
+
+.contribute
+  width: 100%
+  padding: 5.6rem 3.2rem 4.8rem 3.2rem
+  margin: 0 auto
+
+  @include responsiveness(480p)
+    width: 88%
+    padding: 6.4rem 2.4rem 4.8rem 2.4rem
+  
+  @include responsiveness(720p)
+    width: 80%
+  
+  @include responsiveness(1200p)
+    width: 100%
+    max-width: 96rem
+  
+  &__title
+    font-family: var(--typeface-headings)
+    font-size: 2.9rem
+    margin-block-end: 2rem
+
+    @include responsiveness(720p)
+      font-size: 3.2rem
+      margin-block-end: 2.4rem
+  
+  &__text
+    color: var(--color-foreground)
+    display: flex
+    flex-direction: column
+    gap: 4rem
+    font-size: 1.6rem
+    font-weight: 300
+
+    @include responsiveness(720p)
+      font-size: 1.7rem
+  
