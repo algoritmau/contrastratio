@@ -1,0 +1,41 @@
+.tooltip
+  position: relative
+  border-block-end: 1px dotted #ccc
+
+  &::before
+    content: attr(data-tooltip-text)
+    position: absolute
+    bottom: 100%
+    left: 50%
+    transform: translateX(-50%)
+    margin-block-end: 1.2rem
+    width: 21rem
+    height: fit-content
+    padding: 0.8rem
+    border: 1px solid #ddddf0
+    border-radius: 0.4rem
+    box-shadow: 3px 3px 4px var(--color-black)
+    background: lavender
+    color: #686868
+    text-align: center
+    display: none
+    font-size: 1.4rem
+    line-height: 1.5
+    z-index: 1
+  
+  &:hover::before
+    display: block
+  
+  &::after
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: 60%
+    transform: translateX(-50%)
+    border: 10px solid lavender
+    border-color: lavender transparent transparent transparent
+    display: none
+    // FIXME: Fix container's border overlapping with arrow's
+
+  &:hover::after
+    display: block
