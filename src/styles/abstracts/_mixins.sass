@@ -1,0 +1,12 @@
+@mixin responsiveness($breakpoint)
+  @if $breakpoint == 480p
+    @media screen and (min-width: 480px)
+      @content
+  
+  @if $breakpoint == 720p
+    @media screen and (min-width: 720px)
+      @content
+  
+  @if $breakpoint == 960p
+    @media screen and (min-width: 960px)
+      @content
