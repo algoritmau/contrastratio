@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { Instructions } from './components/Instructions';
+import { ProTip } from './components/ProTip';
 import logo from './logo.svg';
 import './styles/App.sass';
 
@@ -22,6 +23,7 @@ function App() {
         </a>
       </header>
       <Instructions />
+      <ProTip />
     </div>
   );
 }

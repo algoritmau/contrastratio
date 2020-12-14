@@ -1,0 +1,23 @@
+@import '../abstracts/_mixins'
+
+.protip
+  width: calc(100% - 6.4rem)
+  margin: 0 auto
+  padding: 2.4rem
+  margin-block-end: 2.4rem
+  background: lavender
+  color: var(--color-black)
+  border-radius: 0.8rem
+
+  @include responsiveness(480p)
+    width: calc(88% - 4.8rem)
+  
+  @include responsiveness(720p)
+    width: calc(80% - 4.8rem)
+  
+  @include responsiveness(1200p)
+    width: calc(96rem - 4.8rem)
+
+  & code
+    font-family: var(--typeface-monospace)
+    display: inline-block
