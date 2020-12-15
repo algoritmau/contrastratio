@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { Instructions } from './components/Instructions';
 import { ProTip } from './components/ProTip';
 import { Contribute } from './components/Contribute';
+import Footer from './components/Footer';
 import logo from './logo.svg';
 import './styles/App.sass';
 
@@ -26,6 +27,7 @@ function App() {
       <Instructions />
       <ProTip />
       <Contribute />
+      <Footer />
     </div>
   );
 }
