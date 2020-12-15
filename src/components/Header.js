@@ -1,20 +1,16 @@
 import React from 'react';
+import Logo from './Logo';
 
 export const Header = () => (
   <header className='header'>
-    <img
-      src='./logo.png'
-      alt='Logo of the contrastrat.io app'
-      className='header__logo'
-    />
+    <Logo />
     <a
       className='header__external-link'
       href='https://github.com/spaceinvadev/constrastrat-io'
-      rel='noreferrer noopener'
+      rel='noreferrer'
       target='_blank'
     >
       <svg
-        className='header__external-link__github-icon'
         width='24'
         height='24'
         viewBox='0 0 24 24'
