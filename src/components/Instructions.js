@@ -23,12 +23,12 @@ export const Instructions = () => (
         />
         ,{' '}
         <Tooltip
-          baseText='rgb() functions (integer or percentage)'
+          baseText='rgb() function (integer or percentage)'
           tooltipText='e.g., 0 0 255 or 0% 0% 100%'
         />
         ,{' '}
         <Tooltip
-          baseText='hsl() / hwb() functions'
+          baseText='hsl() function'
           tooltipText='e.g., 120deg 100% 50%'
         />
         ,{' '}
