@@ -1,49 +1,37 @@
 @import '../abstracts/_mixins'
 
 .footer
+  background: var(--color-foreground)
+  color: var(--color-background)
   border-block-start: 1px solid lavender
   width: 100%
-  padding: 4.8rem 3.2rem 3.2rem 3.2rem
-  margin: 6.4rem auto 0 auto
   font-size: 1.6rem
+  text-align: center
   display: flex
-  flex-direction: column
-  gap: 3.2rem
+  justify-content: center
   align-items: center
 
-  @include responsiveness(480p)
-    width: 88%
-    padding: 6.4rem 2.4rem 4rem 2.4rem
-  
-  @include responsiveness(720p)
-    align-items: flex-start
-    gap: 2.4rem
-    width: 80%
-  
-  @include responsiveness(1200p)
-    width: 100%
-    max-width: 96rem
-  
+  &-inner
+    padding: 4.8rem 3.2rem 3.2rem 3.2rem
 
-  &__info
-    display: flex
-    flex-direction: column
-    gap: 2rem
-    align-items: center
-
+    @include responsiveness(480p)
+      width: 88%
+      padding: 6.4rem 2.4rem 4rem 2.4rem
+    
     @include responsiveness(720p)
-      flex-direction: row
-      justify-content: space-between
+      align-items: flex-start
+      gap: 2.4rem
+      width: 80%
+    
+    @include responsiveness(1200p)
       width: 100%
+      max-width: 96rem
   
+  &__credits
+    margin-block-end: 1.2rem
+
   & a
     font-family: var(--typeface-headings)
     font-weight: 500
     font-size: 1.8rem
-  
-  &__nav
-    display: flex
-    gap: 2.4rem
-
-    &__link
-      padding: 0.8rem
+    color: var(--color-background)
