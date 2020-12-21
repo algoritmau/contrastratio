@@ -1,4 +1,5 @@
 import { Header } from './components/Header';
+import Hero from './components/Hero';
 import { Instructions } from './components/Instructions';
 import { ProTip } from './components/ProTip';
 import { Contribute } from './components/Contribute';
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
+      <Hero />
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <p>
