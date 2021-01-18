@@ -36,13 +36,12 @@ export const Instructions = () => (
           baseText='device-cmyk() function'
           tooltipText='e.g., 0 81% 81% 30%'
         />
-        ,{' '}
+        , or a{' '}
         <Tooltip
-          baseText='a CSS color keyword'
+          baseText='CSS color keyword'
           tooltipText='e.g., lavender, whitesmoke, goldenrod'
         />
-        , or choose a color using the color picker. Use the Lightness slider to
-        adjust the selected color.
+        .
       </p>
       <p>
         In the event of entering colors that do not meet the success criterion,

@@ -1,10 +1,10 @@
 {
-  "name": "contrastrat-io",
+  "name": "contrastrat.io",
   "version": "0.1.0",
   "description": "Evaluate color contrast for accessibility compliance",
   "author": {
     "name": "Mauricio Paternina",
-    "email": "spaceinvadev@outlook.com",
+    "email": "hello@spaceinva.dev",
     "url": "https://spaceinva.dev"
   },
   "license": "MIT",

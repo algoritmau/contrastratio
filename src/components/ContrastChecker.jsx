@@ -1,4 +1,5 @@
 import React from 'react';
+import ColorAnalysis from './ColorAnalysis';
 
 const ContrastChecker = () => {
   return (
@@ -42,7 +43,7 @@ const ContrastChecker = () => {
           </fieldset>
         </form>
       </div>
-      <div className='app__output'>App Output</div>
+      <ColorAnalysis />
       <div className='app__sample'>
         <p className='app__sample__text'>
           Here’s a sample text of how the selected foreground and background

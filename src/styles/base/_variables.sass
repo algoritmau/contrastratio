@@ -1,13 +1,24 @@
 @use "sass:meta"
 @import url("https://use.typekit.net/iwd8ach.css")
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap')
 
 $typeface-headings: degular-display, sans-serif
 $typeface-body-copy: 'Inter', sans-serif
 $typeface-monospace: monospace
 $color-foreground: #080808
 $color-background: #fefefe
+
 $color-accent: #005bfd
+$color-accent-tint: #e1ecff
+$color-accent-blue: #005bfd
+$color-accent-blue-tint: #e1ecff
+$color-accent-green: #107f0b
+$color-accent-green-tint: #d2fbd0
+$color-accent-red: #c83d3d
+$color-accent-red-tint: #fbf1f1
+$color-accent-orange: #8d6b00
+$color-accent-orange-tint: #fff4d1
+
 $color-gray-on-bg: #767676
 $color-borders: #e4e5e5
 $app-foreground-color: #f6fefe
@@ -19,7 +30,18 @@ $app-background-color: #b95fe3
   --typeface-monospace: #{meta.inspect($typeface-monospace)}
   --color-foreground: #{meta.inspect($color-foreground)}
   --color-background: #{meta.inspect($color-background)}
+  
   --color-accent: #{meta.inspect($color-accent)}
+  --color-accent-tint: #{meta.inspect($color-accent-tint)}
+  --color-accent-blue: #{meta.inspect($color-accent-blue)}
+  --color-accent-blue-tint: #{meta.inspect($color-accent-blue-tint)}
+  --color-accent-green: #{meta.inspect($color-accent-green)}
+  --color-accent-green-tint: #{meta.inspect($color-accent-green-tint)}
+  --color-accent-red: #{meta.inspect($color-accent-red)}
+  --color-accent-red-tint: #{meta.inspect($color-accent-red-tint)}
+  --color-accent-orange: #{meta.inspect($color-accent-orange)}
+  --color-accent-orange-tint: #{meta.inspect($color-accent-orange-tint)}
+  
   --color-gray-on-bg: #{meta.inspect($color-gray-on-bg)}
   --color-borders: #{meta.inspect($color-borders)}
   --app-foreground-color: #{meta.inspect($app-foreground-color)}

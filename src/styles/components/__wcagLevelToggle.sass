@@ -1,0 +1,45 @@
+.wcagLevelToggle
+  border: none
+  display: flex
+  gap: 6px
+  justify-content: center
+  align-items: center
+
+  & > *
+    cursor: pointer
+
+  &__label
+    font-size: 1.3rem
+    font-weight: 500
+    line-height: 1
+    margin-block-start: 1px
+    padding: 4px 0
+    color: var(--color-foreground)
+  
+  &__switch
+    -webkit-appearance: none
+    -moz-appearance: none
+    height: 2.2rem
+    width: 4rem
+    border: 1px solid var(--color-accent-blue)
+    background: var(--color-accent-blue-tint)
+    outline: none
+    border-radius: 12px
+    position: relative
+
+    &::after
+      position: absolute
+      content: ''
+      width: 16px
+      height: 16px
+      border-radius: 100%
+      background: var(--color-accent-blue)
+      top: 50%
+      transform: translateY(-50%)
+      transition: left .4s
+
+    &:not(:checked)::after
+      left: 3px
+
+    &:checked::after
+      left: 19px

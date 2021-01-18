@@ -1,0 +1,22 @@
+@import '../abstracts/_mixins'
+
+.contrastRatioStatusTag
+  @include flex-centered
+  width: fit-content
+  padding: 0.7rem
+  border-radius: 4px
+
+  &--pass
+    background: var(--color-accent-green)
+    color: var(--color-accent-green-tint)
+
+  &--fail
+    background: var(--color-accent-red)
+    color: var(--color-accent-red-tint)
+
+  &__text
+    font-size: 1.1rem
+    font-weight: 500
+    line-height: 1
+    text-transform: uppercase
+    letter-spacing: 1.3px

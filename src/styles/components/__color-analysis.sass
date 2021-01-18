@@ -1,0 +1,95 @@
+@import '../abstracts/_mixins'
+
+.colorAnalysis
+  color: var(--color-foreground)
+  padding: 2rem 1.6rem
+
+  @include responsiveness(720p)
+    width: 50%
+
+  &__heading
+    @include flex-space-between
+    margin-block-end: 2rem
+    margin-inline-end: 5px
+
+  &__title
+    text-transform: uppercase
+    font-size: 1.4rem
+    letter-spacing: 1.2px
+    font-weight: 300
+
+  &__wcagLevelSelector
+    padding: 1.2rem 0.8rem
+    background: var(--color-accent-tint)
+    border: none
+    border-radius: 4px
+    font-size: 1.3rem
+    font-weight: 700
+    letter-spacing: 0.8px
+    color: var(--color-accent-blue)
+  
+  &__results
+    display: flex
+    flex-direction: column
+    gap: 2px
+
+    &__overall
+      @include flex-space-between
+      padding: 1.2rem 1.6rem
+      background: var(--color-accent-red-tint)
+      border-top-left-radius: 9px
+      border-top-right-radius: 9px
+    
+    &__contrastRatio
+      font-size: 4.4rem
+      font-weight: 700
+      line-height: 2
+      color: var(--color-accent-red)
+    
+    &__emoji
+      font-size: 4rem
+    
+    &__status
+      @include flex-space-between
+      padding: 2rem 1.6rem
+
+      &--text
+        background: var(--color-accent-orange-tint)
+        color: var(--color-accent-orange)
+      
+      &--graphics
+        background: var(--color-accent-green-tint)
+        color: var(--color-accent-green)
+        border-bottom-left-radius: 9px
+        border-bottom-right-radius: 9px
+    
+    &__normalTextStatus,
+    &__largeTextStatus,
+    &__graphicsStatus
+      display: flex
+      gap: 0.7rem
+
+    &__normalTextStatus,
+    &__largeTextStatus
+      align-items: flex-start
+
+      @include responsiveness(414p)
+        align-items: center
+    
+    &__graphicsStatus
+      align-items: center
+    
+    &__normalTextStatus p,
+    &__largeTextStatus p
+      width: min-content
+      line-height: 1.5
+
+      @include responsiveness(414p)
+        width: fit-content
+
+    &__normalTextStatus .contrastRatioStatusTag,
+    &__largeTextStatus .contrastRatioStatusTag
+      margin-block-start: 0.6rem
+
+      @include responsiveness(414p)
+        margin-block-start: 0
