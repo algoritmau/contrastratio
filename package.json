@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "react-tooltip": "^4.2.17",
     "sass": "^1.30.0"
   }
 }
