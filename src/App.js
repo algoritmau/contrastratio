@@ -4,6 +4,9 @@ import ContrastChecker from './components/ContrastChecker';
 import { Instructions } from './components/Instructions';
 import { Contribute } from './components/Contribute';
 import Footer from './components/Footer.jsx';
+
+import './styles/base/reset.sass';
+import './styles/globals.sass';
 import './styles/styles.sass';
 
 function App() {
