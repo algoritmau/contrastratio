@@ -1,6 +1,6 @@
 import React from 'react';
 import { IkerLink } from './IkerLink';
-import { Tooltip } from './Tooltip';
+import ReactTooltip from 'react-tooltip';
 
 export const Instructions = () => (
   <section className='instructions'>
@@ -16,32 +16,44 @@ export const Instructions = () => (
       </p>
       <p>
         Enter a foreground and a background color in any of the following
-        notations:{' '}
-        <Tooltip
-          baseText='RGB hexadecimal'
-          tooltipText='6- or 3-digit RGB hex value. e.g., #080808 or #777'
-        />
+        formats:{' '}
+        <span
+          data-class='instructions__tooltip'
+          data-tip='6- or 3-digit RGB hex value. e.g., #080808 or #777'
+          data-background-color='#005bfd'
+          data-text-color='#ececec'
+        >
+          RGB hexadecimal
+        </span>
         ,{' '}
-        <Tooltip
-          baseText='rgb() function (integer or percentage)'
-          tooltipText='e.g., 0 0 255 or 0% 0% 100%'
-        />
+        <span
+          data-class='instructions__tooltip'
+          data-tip='e.g., 0 0 255 or 0% 0% 100%'
+          data-background-color='#005bfd'
+          data-text-color='#ececec'
+        >
+          <code>rgb()</code> function
+        </span>
         ,{' '}
-        <Tooltip
-          baseText='hsl() function'
-          tooltipText='e.g., 120deg 100% 50%'
-        />
-        ,{' '}
-        <Tooltip
-          baseText='device-cmyk() function'
-          tooltipText='e.g., 0 81% 81% 30%'
-        />
-        , or a{' '}
-        <Tooltip
-          baseText='CSS color keyword'
-          tooltipText='e.g., lavender, whitesmoke, goldenrod'
-        />
+        <span
+          data-class='instructions__tooltip'
+          data-tip='e.g., 120deg 100% 50%'
+          data-background-color='#005bfd'
+          data-text-color='#ececec'
+        >
+          <code>hsl()</code> function
+        </span>
+        , , or a{' '}
+        <span
+          data-class='instructions__tooltip'
+          data-tip='e.g., lavender, whitesmoke, goldenrod'
+          data-background-color='#005bfd'
+          data-text-color='#ececec'
+        >
+          CSS color keyword
+        </span>
         .
+        <ReactTooltip />
       </p>
       <p>
         In the event of entering colors that do not meet the success criterion,
@@ -50,13 +62,13 @@ export const Instructions = () => (
         corresponding input field.
       </p>
       <p>
-        You can also alternate between AA and AAA to test for level-specific
-        criterion. Note that for Level AA, WCAG 2.1 requires a contrast ratio of
-        at least 4.5:1 for normal text and 3:1 for large text. A contrast ratio
-        of at least 3:1 is also required for graphics and user interface
-        components (such as form input borders). WCAG 2.1 Level AAA, on the
-        other hand, requires a contrast ratio of at least 7:1 for normal text
-        and 4.5:1 for large text.
+        You can also alternate between AA and AAA to test for WCAG
+        level-specific criterion. Note that for Level AA, WCAG 2.1 requires a
+        contrast ratio of at least 4.5:1 for normal text and 3:1 for large text.
+        A contrast ratio of at least 3:1 is also required for graphics and user
+        interface components (such as form input borders). WCAG 2.1 Level AAA,
+        on the other hand, requires a contrast ratio of at least 7:1 for normal
+        text and 4.5:1 for large text.
       </p>
       <p>
         Consider large text as 14 point (about 18.66px) and bold or larger, or
