@@ -1,10 +1,9 @@
 @use "sass:meta"
-@import url("https://use.typekit.net/iwd8ach.css")
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap')
 
-$typeface-headings: degular-display, sans-serif
-$typeface-body-copy: 'Inter', sans-serif
-$typeface-monospace: monospace
+$fonts-path: '../../static/assets/fonts'
+
+$app-typeface: 'Inter', sans-serif
+$typeface-mono: monospace
 $color-foreground: #080808
 $color-background: #fefefe
 
@@ -24,10 +23,21 @@ $color-borders: #e4e5e5
 $app-foreground-color: #f6fefe
 $app-background-color: #b95fe3
 
+@font-face
+  font-family: 'Inter'
+  font-style:  normal
+  font-weight: 300
+  src: url('#{$fonts-path}/Inter-Light.woff2?v=3.18') format('woff2'), url('#{$fonts-path}/Inter-Light.woff?v=3.18') format('woff')
+
+@font-face
+  font-family: 'Inter'
+  font-style:  normal
+  font-weight: 700
+  src: url('#{$fonts-path}/Inter-Bold.woff2?v=3.18') format('woff2'), url('#{$fonts-path}/Inter-Bold.woff?v=3.18') format('woff')
+
 :root
-  --typeface-headings: #{meta.inspect($typeface-headings)}
-  --typeface-body-copy: #{meta.inspect($typeface-body-copy)}
-  --typeface-monospace: #{meta.inspect($typeface-monospace)}
+  --app-typeface: #{meta.inspect($app-typeface)}
+  --typeface-monospace: #{meta.inspect($typeface-mono)}
   --color-foreground: #{meta.inspect($color-foreground)}
   --color-background: #{meta.inspect($color-background)}
   
