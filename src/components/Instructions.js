@@ -1,54 +1,54 @@
-import React from 'react';
-import { IkerLink } from './IkerLink';
-import ReactTooltip from 'react-tooltip';
+import React from 'react'
+import { IkerLink } from './IkerLink'
+import ReactTooltip from 'react-tooltip'
 
 export const Instructions = () => (
-  <section className='instructions'>
-    <h2 className='instructions__title'>How does it work?</h2>
-    <div className='instructions__text'>
+  <section className="instructions">
+    <h2 className="instructions__title">How does it work?</h2>
+    <div className="instructions__text">
       <p>
         <strong>contrastrat.io</strong> allows you to check whether there is
         sufficient contrast ratio between a given pair of foreground and
         background colors so they meet the success criterion specified by the
         Web Content Accessibility Guidelines (WCAG 2.1). Learn more about the
         WCAG standards at their{' '}
-        <IkerLink to='https://www.w3.org/TR/WCAG21' text='website' />.
+        <IkerLink to="https://www.w3.org/TR/WCAG21" text="website" />.
       </p>
       <p>
         Enter a foreground and a background color in any of the following
         formats:{' '}
         <span
-          data-class='instructions__tooltip'
-          data-tip='6- or 3-digit RGB hex value. e.g., #080808 or #777'
-          data-background-color='#005bfd'
-          data-text-color='#ececec'
+          data-class="instructions__tooltip"
+          data-tip="6- or 3-digit RGB hex value. e.g., #080808 or #777"
+          data-background-color="#005bfd"
+          data-text-color="#ececec"
         >
           RGB hexadecimal
         </span>
         ,{' '}
         <span
-          data-class='instructions__tooltip'
-          data-tip='e.g., 0 0 255 or 0% 0% 100%'
-          data-background-color='#005bfd'
-          data-text-color='#ececec'
+          data-class="instructions__tooltip"
+          data-tip="e.g., 0 0 255 or 0% 0% 100%"
+          data-background-color="#005bfd"
+          data-text-color="#ececec"
         >
           <code>rgb()</code> function
         </span>
         ,{' '}
         <span
-          data-class='instructions__tooltip'
-          data-tip='e.g., 120deg 100% 50%'
-          data-background-color='#005bfd'
-          data-text-color='#ececec'
+          data-class="instructions__tooltip"
+          data-tip="e.g., 120deg 100% 50%"
+          data-background-color="#005bfd"
+          data-text-color="#ececec"
         >
           <code>hsl()</code> function
         </span>
         , , or a{' '}
         <span
-          data-class='instructions__tooltip'
-          data-tip='e.g., lavender, whitesmoke, goldenrod'
-          data-background-color='#005bfd'
-          data-text-color='#ececec'
+          data-class="instructions__tooltip"
+          data-tip="e.g., lavender, whitesmoke, goldenrod"
+          data-background-color="#005bfd"
+          data-text-color="#ececec"
         >
           CSS color keyword
         </span>
@@ -76,4 +76,4 @@ export const Instructions = () => (
       </p>
     </div>
   </section>
-);
+)

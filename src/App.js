@@ -1,17 +1,17 @@
-import { Header } from './components/Header';
-import Hero from './components/Hero';
-import ContrastChecker from './components/ContrastChecker';
-import { Instructions } from './components/Instructions';
-import { Contribute } from './components/Contribute';
-import Footer from './components/Footer.jsx';
+import { Header } from './components/Header'
+import Hero from './components/Hero'
+import ContrastChecker from './components/ContrastChecker'
+import { Instructions } from './components/Instructions'
+import { Contribute } from './components/Contribute'
+import Footer from './components/Footer'
 
-import './styles/base/reset.sass';
-import './styles/globals.sass';
-import './styles/styles.sass';
+import './styles/base/reset.sass'
+import './styles/globals.sass'
+import './styles/styles.sass'
 
-function App() {
+export default function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <Hero />
       <ContrastChecker />
@@ -19,7 +19,5 @@ function App() {
       <Contribute />
       <Footer />
     </div>
-  );
+  )
 }
-
-export default App;
