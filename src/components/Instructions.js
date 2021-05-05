@@ -43,7 +43,7 @@ export const Instructions = () => (
         >
           <code>hsl()</code> function
         </span>
-        , , or a{' '}
+        , or a{' '}
         <span
           data-class="instructions__tooltip"
           data-tip="e.g., lavender, whitesmoke, goldenrod"

@@ -1,5 +1,3 @@
-import isHexColor from './isHexColor'
-
 const THREE_DIGIT_HEX_COLOR_REGEX = /^[0-9a-fA-F]{3}$/
 const THREE_DIGIT_HEX_COLOR_WITH_HASH_REGEX = /^#[0-9a-fA-F]{3}$/
 const SIX_DIGIT_HEX_COLOR_REGEX = /^[0-9a-fA-F]{6}$/
@@ -13,25 +11,23 @@ const isHashed6DigitHexColor = (color) =>
   color.match(SIX_DIGIT_HEX_COLOR_WITH_HASH_REGEX)
 
 export default function formatHexColor(color) {
-  if (isHexColor(color)) {
-    let formattedColor
+  let formattedColor
 
-    if (is3DigitHexColor(color)) {
-      formattedColor = `#${formattedColor}`
-    }
-
-    if (isHashed3DigitHexColor(color)) {
-      formattedColor = `${formattedColor}`
-    }
-
-    if (is6DigitHexColor(color)) {
-      formattedColor = `#${formattedColor}`
-    }
-
-    if (isHashed6DigitHexColor(color)) {
-      formattedColor = `${formattedColor}`
-    }
-
-    return formattedColor.toUpperCase()
+  if (is3DigitHexColor(color)) {
+    formattedColor = `#${color}`
   }
+
+  if (isHashed3DigitHexColor(color)) {
+    formattedColor = `${color}`
+  }
+
+  if (is6DigitHexColor(color)) {
+    formattedColor = `#${color}`
+  }
+
+  if (isHashed6DigitHexColor(color)) {
+    formattedColor = `${color}`
+  }
+
+  return formattedColor.toUpperCase()
 }

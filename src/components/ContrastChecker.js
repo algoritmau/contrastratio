@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
+import ColorAnalysis from './ColorAnalysis'
 
 import isValidColor from '../utils/colors/isValidColor'
-import formatHexColor from '../utils/colors/formatHexColor'
+import identifyColorNotation from '../utils/colors/identifyColorNotation'
+import formatColorToHex from '../utils/colors/formatColorToHex'
 
 export default function ContrastChecker() {
   const [foregroundColor, setForegroundColor] = useState('#F6FEFE')
@@ -14,9 +16,14 @@ export default function ContrastChecker() {
 
   const handleForegroundColorChange = (e) => {
     const sanitizedColorInput = e.target.value
+    let colorNotation, formattedColor
 
     if (isValidColor(sanitizedColorInput)) {
-      console.log(`${sanitizedColorInput} IS a valid color`)
+      colorNotation = identifyColorNotation(sanitizedColorInput)
+      formattedColor = formatColorToHex(sanitizedColorInput, colorNotation)
+
+      setForegroundColor(formattedColor)
+      foregroundColorSwatchRef.current.style.backgroundColor = formattedColor
     } else {
       console.log(`${sanitizedColorInput} IS NOT a valid color!`)
     }
@@ -43,6 +50,11 @@ export default function ContrastChecker() {
                 className="colorsSourceForm__colorSourceInput"
                 placeholder={foregroundColor}
                 onChange={handleForegroundColorChange}
+              />
+              <input
+                type="color"
+                className="colorsSourceForm__colorSourceSwatch colorsSourceForm__colorSourceSwatch--foreground"
+                onChange={(e) => console.log(e.target.value)}
               />
               <div
                 ref={foregroundColorSwatchRef}
@@ -72,7 +84,7 @@ export default function ContrastChecker() {
           </fieldset>
         </form>
       </div>
-      {/* <ColorAnalysis /> */}
+      <ColorAnalysis />
       <div className="app__sample">
         <p className="app__sample__text">
           Here’s a sample text of how the selected foreground and background

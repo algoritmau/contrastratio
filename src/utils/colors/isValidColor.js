@@ -1,5 +1,5 @@
-import isHexColor from './isHexColor'
 import isNamedColor from './isNamedColor'
+import isHexColor from './isHexColor'
 
 export default function isValidColor(color) {
   if (isNamedColor(color) || isHexColor(color)) {
